@@ -49,8 +49,8 @@ jobs:
           sarif-file: sca_scout.sarif
           output: sbom_scout.spdx.json
           format: spdx
-          username: ${{ secrets.DOCKER_USER}}
-          password: ${{ secrets.DOCKER_PAT }}
+          registry-user: ${{ secrets.DOCKER_USER}}
+          registry-password: ${{ secrets.GHCR_PAT }}
 
       - name: Upload SBOM file as an artifact
         uses: actions/upload-artifact@v4
